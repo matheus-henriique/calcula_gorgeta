@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora de Gorjeta </title>
+
+</head>
+
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="Logo do Splitter">
+  </header>
+  <main>
+    <form action="">
+      <div class="bill distance">
+        <label for="bill-input">Bill</label>
+        <div class="input-box">
+          <img src="./images/icon-dollar.svg" alt="Icone da moeda dolar ">
+          <input type="number" id="bill-input" placeholder="0" onchange="receberConta()">
+        </div>
+      </div>
+
+      <div class="tip distance">
+        <label>Select Tip %</label>
+        <div class="input-boxes">
+          <input type="button" value="5%" onclick="receberPorcentagemDagorjeta(5)">
+          <input type="button" value="10%" onclick="receberPorcentagemDagorjeta(10)">
+          <input type="button" value="15%" onclick="receberPorcentagemDagorjeta(15)">
+          <input type="button" value="25%" onclick="receberPorcentagemDagorjeta(25)">
+          <input type="button" value="50%" onclick="receberPorcentagemDagorjeta(50)">
+          <input type="number" id="tip-input" placeholder="Custom" onchange="receberPorcentagemDagorjeta(0)">
+        </div>
+      </div>
+
+      <div class="people ">
+        <label for="c">Number of People</label>
+        <div class="input-box">
+          <img src="./images/icon-person.svg" alt="Icone de uma pessoa">
+          <input type="number" id="people-input" placeholder="0" onchange="receberNumeroDePessoas()">
+        </div>
+      </div>
+    </form>
+    <section class="results">
+      <div class="results-value">
+        <div class="tip-amount">
+          <p>Tip Amoumt <br> <span>/ person</span></p>
+          <p id="tip-amount_result">$0.00</p>
+        </div>
+
+        <div class="total">
+          <p>Total <br> <span>/ person</span></p>
+          <p id="total_result">$0.00</p>
+        </div>
+      </div>
+      <button onclick="reset()" type="button">reset</button>
+    </section>
+  </main>
+  <script src="./scripts/index.js"></script>
+</body>
+
+</html>
